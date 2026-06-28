@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permohonan Izin</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#e8f5e9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.card{
+    background:white;
+    width:350px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    position:relative;
+}
+
+button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+#acc{
+    background:#4CAF50;
+    color:white;
+}
+
+#revisi{
+    background:#f44336;
+    color:white;
+    position:absolute;
+}
+
+.note{
+    margin-top:20px;
+    font-size:12px;
+    color:#777;
+    font-style:italic;
+    line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>🏔️ Gunung Lawu</h2>
+
+<p>
+Ibu Negara,<br>
+izinkan aku naik Gunung Lawu dulu ya.<br>
+turun gunung,langsung aku buat, janji 👊🤟
+</p>
+
+<button id="acc" onclick="acc()">
+✅ ACC  ya bu negara
+</button>
+
+<button id="revisi">
+📄 Revisi dulu
+</button>
+
+<p class="note">
+📢 <b>perhatian</b><br>
+Sistem <b>"Revisi Dulu"</b> sedang mengalami gangguan.
+Apabila tombol tersebut dicoba diklik, sistem akan otomatis mengaktifkan
+<b>Mode Lari</b> 🏃💨.
+Mohon gunakan tombol <b>ACC Bu negara</b>. 
+</p>
+
+</div>
+
+<script>
+const revisi=document.getElementById("revisi");
+
+revisi.addEventListener("mouseover",()=>{
+revisi.style.left=Math.random()*220+"px";
+revisi.style.top=Math.random()*180+"px";
+});
+
+revisi.addEventListener("touchstart",()=>{
+revisi.style.left=Math.random()*220+"px";
+revisi.style.top=Math.random()*180+"px";
+});
+
+function acc(){
+alert(" 🤟Terima kasih, Ibu Negara.\n\nPermohonan izin diterima. 🏔️\nPendaki akan kembali dengan selamat,\ndan revisi tidak akan ikut mendaki.\n\n");
+}
+</script>
+
+</body>
+</html>
